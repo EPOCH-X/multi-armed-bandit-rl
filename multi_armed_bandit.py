@@ -109,18 +109,22 @@ def run_experiment():
     plt.title('1. Cumulative Reward (Averaged)')
     plt.legend()
     
-    # 2. 머신별 선택 횟수 (50번 평균)
+    # 2. 머신별 선택 비율 (50번 평균)
     plt.subplot(1, 3, 2)
     x = np.arange(env.n_arms)
     width = 0.2
     multiplier = 0
     for name in strategies:
         offset = width * multiplier
-        plt.bar(x + offset, avg_counts[name], width, label=name)
+        plt.bar(x + offset, avg_counts[name] / steps, width, label=name)
         multiplier += 1
+
+    true_probs = env.arms_probs
+    plt.plot(x + width * 1.5, true_probs, 'ko--', label='True Probability')
+
     plt.xlabel('Arm Index')
-    plt.ylabel(f'Average Selection Count')
-    plt.title('2. Arm Selection Count (Averaged)')
+    plt.ylabel('Selection Ratio')
+    plt.title('2. Arm Selection Ratio (Averaged)')
     plt.xticks(x + width*1.5, [f'Arm {i}' for i in range(env.n_arms)])
     plt.legend()
     

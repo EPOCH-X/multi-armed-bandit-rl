@@ -35,6 +35,7 @@
 * **Cumulative Reward (누적 보상 곡선):** 50번의 실행 평균을 내어, 스텝이 진행됨에 따라 각 전략이 누적하는 수익의 성장세를 보여줍니다.
 * **Arm Selection Ratio (머신별 선택 비율):** 에이전트가 어떤 머신을 얼마나 선택했는지 보여주며, 점선으로 표시된 '실제 확률'과 비교하여 정답(가장 확률이 높은 머신)을 얼마나 잘 찾아냈는지 평가합니다.
 * **Max/Avg Predicted Values Distribution (예측 가치 분포도):** 50번의 반복 실험 동안 에이전트가 도출해낸 '최대 예측 가치'와 '평균 예측 가치'의 분포를 산점도(Scatter plot with Jitter)로 보여주어, 각 알고리즘의 안정성과 탐색 수준을 직관적으로 확인합니다.
+<img width="2428" height="1056" alt="image" src="https://github.com/user-attachments/assets/82224af7-7d78-410d-8751-93845e9c3f15" />
 
 ---
 
